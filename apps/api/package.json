@@ -1,0 +1,26 @@
+{
+  "name": "api",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+
+"scripts":{
+  "dev":"bun run index.ts",
+  "db:generate":"bunx prisma migrate"
+
+
+},
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@repo/typescript-config":"*"
+  },
+  "peerDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.6",
+    "@types/typescript": "^2.0.0",
+    "express": "^5.2.1",
+    "@repo/db":"*"
+  }
+}

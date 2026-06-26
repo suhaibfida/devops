@@ -1,0 +1,23 @@
+From oven/bun:1
+
+WORKDIR /user/apps
+
+COPY ./packages ./packages
+
+COPY ./bun.lock  .
+
+COPY ./package.json .
+
+COPY ./turbo.json  .
+
+RUN bun install
+
+COPY ./apps/api ./apps/api
+
+RUN  cd packages/db &&  bun db:generate
+
+EXPOSE 3000
+
+CMD ["bun", "run","start:api"]
+
+

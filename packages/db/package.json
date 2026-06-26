@@ -1,0 +1,13 @@
+{
+  "name": "@repo/db",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "exports":{
+        
+    "./prisma": "./lib/prisma.ts"},
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
